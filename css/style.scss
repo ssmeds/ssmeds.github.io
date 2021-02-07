@@ -1,0 +1,493 @@
+// Import recurring styles and media queries
+@import "base";
+
+//////////////////////////////////////////////
+////////////// General styling ///////////////
+//////////////////////////////////////////////
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: #333;
+}
+
+h1 {
+  font-family: $font-headline;
+}
+
+h2 {
+  font-family: $font-special;
+}
+
+p {
+  font-family: $font-paragraphs;
+}
+//////////////////////////////////////////////
+//////////////// Nav styling /////////////////
+//////////////////////////////////////////////
+.nav {
+  background-color: $color-black;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  padding: 0 25px;
+  overflow: hidden;
+
+  @include tablet {
+    height: 4rem;
+  }
+
+  &__links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-white;
+    font-family: $font-special;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span {
+      color: $color-green;
+    }
+  }
+
+  // Hamburger menu icon
+  i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.7rem;
+    color: $color-green;
+
+    @include tablet {
+      font-size: 2.7rem;
+    }
+  }
+}
+
+// Open navigation menu
+.active {
+  display: block;
+  background-color: $color-black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  transition: all 2s ease;
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: $font-special;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-green;
+
+    span {
+      color: $color-white;
+    }
+  }
+
+  .nav__links {
+    display: inline-block;
+    text-align: center;
+  }
+
+  li {
+    padding: 2rem;
+    font-family: $font-paragraphs;
+    list-style: none;
+    font-size: 2.5rem;
+
+    &:hover {
+      cursor: pointer;
+
+    }
+
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: $color-white;
+
+      &:hover {
+        color: $color-green;
+        font-weight: 700;
+      }
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: $color-white;
+  }
+}
+
+//////////////////////////////////////////////
+/////////// Home section styling /////////////
+//////////////////////////////////////////////
+
+
+.home {
+  background: url("/img/home_horizontal_smaller.jpg") no-repeat;
+  background-attachment: fixed; /* Parallax effect on background image */
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  min-height: 100vh;
+
+  .home-content {
+    width: 500px;
+    margin: auto 0 auto 60px;
+    font-weight: 600;
+    color: $color-white;
+    font-family: $font-headline;
+
+    @include tablet {
+      margin: auto;
+    }
+
+    .text1 {
+      font-size: 2rem;
+    }
+
+    .text2 {
+      font-size: 5rem;
+      margin: 0.8rem 0;
+      line-height: 1;
+    }
+
+    .text3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .text4 {
+      font-size: 2rem;
+      color: $color-green;
+      text-transform: uppercase;
+    }
+  }
+}
+
+//////////////////////////////////////////////
+///////// About me section styling ///////////
+//////////////////////////////////////////////
+
+.about {
+  min-height: 100vh;
+  background: url("/img/about_horizontal_smaller.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect on background image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include desktop {
+    padding: 2rem;
+
+    .about__wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      max-width: 80%;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+    color: $color-white;
+    text-shadow: $text-shadow-dark;
+    margin-bottom: 5rem;
+
+    span {
+      color: $color-green;
+    }
+  }
+
+  &__image {
+    margin-bottom: 2rem;
+
+    // Hover effect on image to make it scale and rotate
+    img {
+      width: 200px;
+      border-radius: 30%;
+      transition: all 1s ease-in-out;
+
+      &:hover {
+        transform: rotate(20deg) scale(1.2);
+      }
+    }
+  }
+
+  &__headline {
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+
+  &__card {
+    margin: 0 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: 15px;
+    line-height: 1.7;
+
+    p {
+      padding: 10px;
+
+      @include desktop {
+        font-size: 1.7rem;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+//////////////////////////////////////////////
+///////// Portfolio section styling //////////
+//////////////////////////////////////////////
+
+
+.portfolio {
+  background: url("/img/portfolio_horizontal_smaller.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect on background image */
+  text-align: center;
+  padding-top: 2rem;
+
+  h2 {
+    margin: 0;
+    font-size: 4rem;
+    color: $color-white;
+    text-shadow: $text-shadow-dark;
+
+    span {
+      color: $color-green;
+    }
+  }
+
+  // Skill icons and their hover effects
+  &__icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem;
+    font-size: 3.5rem;
+    color: $color-white;
+
+    i {
+      transition: all 1s ease-in-out;
+    }
+
+    i:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  // Portfolio images of website screenshots
+  .portfolio__works {
+    text-align: center;
+    padding-bottom: 3rem;
+
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .portfolio__image {
+        padding-top: 2rem;
+        width: 80%;
+        position: relative;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          @include card;
+          margin: 0;
+        }
+
+        // The hover effect for the screenshots
+        &--overlay {
+          margin-top: 2rem;
+          padding-bottom: 10px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: 0.8s ease;
+          background-color: $color-green;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &--text {
+          color: $color-white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          width: 80%;
+
+          h2 {
+            padding: 10px 0;
+          }
+
+          p {
+            padding-bottom: 20px;
+          }
+
+          // The Visit-link
+          .info {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            padding: 10px;
+            border-radius: 10%;
+            transition: all 0.6s ease;
+            color: $color-blue;
+
+            &.info:hover {
+              background-color: $color-blue;
+              color: $color-green;
+            }
+          }
+        }
+      }
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+
+        .portfolio__image {
+          max-width: 40vw;
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////
+/////////// Quote section styling ////////////
+//////////////////////////////////////////////
+
+
+
+aside {
+  border-bottom: 1px solid $color-white;
+
+  .quote {
+    font-size: 1.5rem;
+    background: url("/img/quote_horizontal_smaller_still.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax effect on background image */
+    text-align: center;
+    margin: 0;
+    color: $color-white;
+    font-family: $font-special;
+    padding: 2rem;
+
+    &__card--author {
+      font-style: italic;
+      color: $color-green;
+    }
+  }
+}
+
+//////////////////////////////////////////////
+///////// Contact me section styling /////////
+//////////////////////////////////////////////
+
+
+.contact {
+  padding: 2rem;
+  background-color: $color-black;
+  position: relative;
+  color: $color-white;
+  text-align: center;
+
+  &__headline {
+    padding: 0 0 2rem 0;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  // Social media icons and hover effect
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+
+    i {
+      font-size: 2rem;
+      padding: 10px;
+      transition: all 1s ease;
+      color: $color-green;
+
+      &:hover {
+        transform: scale(1.5);
+        color: $color-white;
+      }
+    }
+  }
+
+  // Back to top-link
+  .scroll-up {
+    color: $color-white;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    border-bottom: 1px solid $color-green;
+
+    &:hover {
+      color: $color-green;
+    }
+  }
+}

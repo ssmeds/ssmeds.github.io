@@ -1,45 +1,165 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Startup</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <!-- Your own stylesheet -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <header class="startup text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-12 my-auto">
-            <h1 class="text-uppercase faded">
-            <strong>The biggest startup event of the year</strong>
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-12 my-auto">
-            <!-- Begin Mailchimp Signup Form -->
-<!--             <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-            <style type="text/css"> -->
-<!--             #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
-            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-            </style> -->
-            <div id="mc_embed_signup">
-              <form action="https://testingwebsite.us19.list-manage.com/subscribe/post?u=e14dc5d010e4f7a788eb1aa24&amp;id=d12fb7f828" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e14dc5d010e4f7a788eb1aa24_d12fb7f828" tabindex="-1" value=""></div>
-                  <div class="clear"><input class="btn btn-primary btn-xl" type="submit" value="Find out more" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-              </form>
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Stina Smeds Portfolio</title>
+  <meta name="description" content="A budding Front End Developers portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Stina Smeds Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.stinasmeds.se">
+  <meta property="og:image" content="img/stina-profilePicture-3x">
+  <meta property="og:description" content="A budding Front End Developers portfolio">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Raleway:wght@300;400&family=Ubuntu:wght@500;700&display=swap">
+
+  <link rel="stylesheet" href="css/main-min.css">
+  <link rel="stylesheet" href="css/style-min.css">
+
+  <script src="https://kit.fontawesome.com/c4787c1f8e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <!------------------ Nav section starts ------------------>
+    <nav class="nav" id="nav">
+      <div class="logo">Stina<span>Smeds</span></div>
+      <ul class="nav__links">
+        <li><a href="#home">Hem</a></li>
+        <li><a href="#about">Om mig</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <!-- Hamburger menu icon with a function to toggle opening of the menu navigation -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()" title="menu-bar">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+
+    <!------------------ Home section starts ----------------->
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="text1">Hi, my name is</div>
+        <div class="text2">Stina Smeds</div>
+        <div class="text3">And I am a budding</div>
+        <div class="text4">Front End Developer</div>
+      </div>
+    </section>
+
+    <!------------------ About me section starts ------------->
+    <section class="about" id="about">
+      <h2>Who is <span>Stina</span>?</h2>
+      <div class="about__wrapper">
+        <div class="about__image">
+          <!-- A number of different sized images for the browser to pick from -->
+          <img srcset="
+          /img/stina-profilePicture-4x.jpg 4x,
+          /img/stina-profilePicture-3x.jpg 3x,
+          /img/stina-profilePicture-2x.jpg 2x,
+          /img/stina-profilePicture-1x.jpg 1x " src="/img/stina-profilePicture-fallback.jpg" alt="A picture of Stina">
+        </div>
+        <article class="about__card">
+          <h2 class="about__headline">My story</h2>
+          <p>After graduating from a well known finance school I found myself drawn more towards coding and web
+            development than to finance.</p>
+          <p>I started learning programming and development on my own a few years back and haven't ever regretted my
+            choice to switch careers.</p>
+          <p>I've dabbled in a lot of different languages and techniques including HTML, CSS, some Javascript and C#.
+            I've tried React and Angular and Node.js. I also have an account on Github and Stackoverflow.</p>
+          <p>Websites that have been my major source of knowledge are Udemy, FreeCodeCamp and Youtube of course. In
+            addition to full-time studies, I am a full-time mother of four wild, crazy and wonderful boys.</p>
+        </article>
+      </div>
+    </section> <!-- About section ends -->
+
+    <!---------------- Portfolio section starts ------------->
+    <section class="portfolio" id="portfolio">
+      <h2 class="portfolio__headline">Ski<span>lls</span></h2>
+      <div class="portfolio__icons">
+        <!-- Fontawesome skill icons -->
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-wordpress"></i>
+        <i class="fab fa-js"></i>
+      </div>
+
+      <section class="portfolio__works">
+        <h2>Previous <span>works</span></h2>
+        <div class="portfolio__works--wrapper">
+          <div class="portfolio__image">
+            <!-- A number of different sized images for the browser to pick from -->
+            <img srcset="
+            /img/mybigyellowhouse-4x.png 4x,
+            /img/mybigyellowhouse-3x.png 3x,
+            /img/mybigyellowhouse-2x.png 2x,
+            /img/mybigyellowhouse-1x.png 1x " src="/img/mybigyellowhouse-fallback.png"
+              alt="MyBigYellowHouse Blog Screenshot">
+            <div class="portfolio__image--overlay">
+              <div class="portfolio__image--text">
+                <h2>My Big Yellow House</h2>
+                <p>My personal blog about big family life.</p>
+                <a href="http://seasticksurf.se/" class="info">Visit</a>
+              </div>
             </div>
-            <!--End mc_embed_signup-->
+          </div>
+
+          <div class="portfolio__image">
+            <!-- A number of different sized images for the browser to pick from -->
+            <img srcset="
+            /img/seastick-4x.png 4x,
+            /img/seastick-3x.png 3x,
+            /img/seastick-2x.png 2x,
+            /img/seastick-1x.png 1x " src="/img/seastick-fallback.png" alt="SeaStick Surf Screenshot">
+            <div class="portfolio__image--overlay">
+              <div class="portfolio__image--text">
+                <h2>SeaStick</h2>
+                <p>A stick for your GoPro, perfect for kitesurfing.</p>
+                <a href="http://seasticksurf.se/" class="info">Visit</a>
+              </div>
+            </div>
           </div>
         </div>
+      </section> <!-- Portfolio_works sections ends -->
+    </section> <!-- Portfolio section ends -->
+
+
+
+    <!-------------- Quote section starts --------------->
+    <aside>
+      <div class="quote">
+        <q class="quote__card">The secret of change is to focus all of your energy not on fighting the old, but on
+          building the new.</q>
+        <p class="quote__card--author">-Socrates</p>
       </div>
-    </header>
-  </body>
+    </aside>
+
+    <!------------- Contact section starts -------------->
+    <footer class="contact" id="contact">
+      <h2 class="contact__headline">Contact me</h2>
+      <div class="icons">
+        <a class="contact__link" href="https://www.facebook.com/stina.smeds.7/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a class="contact__link" href="https://www.linkedin.com/in/stina-smeds/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a class="contact__link" href="https://mybigyellowhouse.com" title="Blog"><i class="fas fa-home"></i></a>
+        <a class="contact__link" href="mailto:stina.smeds@medieinstitutet.se" title="E-mail"><i class="far fa-envelope"></i></a>
+        <a class="contact__link" href="https://twitter.com/maelysworld" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <a class="scroll-up" href="#nav">Back to top</a>
+    </footer>
+
+  </main>
+  <!--------------- Toggle menu/navbar script ----------->
+  <script>
+    // This script toggles the class .active on the id #nav when it's clicked
+    function myFunction() {
+      var mobileMenu = document.getElementById("nav");
+      mobileMenu.classList.toggle("active");
+    }
+  </script>
+
+</body>
+
 </html>

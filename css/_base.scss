@@ -1,0 +1,48 @@
+//////////// Typography //////////////////////////
+
+$font-headline: 'Ubuntu', sans-serif;
+$font-paragraphs: 'Montserrat', sans-serif;
+$font-special: 'Raleway', sans-serif;
+
+//////////// Recurring styles ///////////////////
+
+// Card styling with a shadow around so it looks like it pops out a bit
+@mixin card {
+  margin: 2rem 4rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+///////////// Color scheme //////////////////////
+
+$color-blue: #371BB1;
+$color-green: #05F4B7;
+$color-black: #12151F;
+$color-white: #FEFEFA;
+$text-shadow-dark: 3px 3px 4px rgba(0, 9, 0, 0.85);
+$text-shadow-light: 3px 3px 4px rgba(255, 255, 255, 0.85);
+
+//////////// Media queries /////////////////////
+
+// Breakpoints for the different devices
+$phone-width: 640px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin phone {
+  @media (max-width: $phone-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
