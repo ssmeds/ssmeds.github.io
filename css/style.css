@@ -466,6 +466,35 @@ p {
   }
 }
 
+.portfolio #repos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+  padding: 2rem 0;
+}
+
+.portfolio #repos div {
+  font-family: "Montserrat", sans-serif;
+  background-color: #371BB1;
+  padding: 25px;
+  font-size: 1.5rem;
+  border: 1px solid #FEFEFA;
+  cursor: pointer;
+}
+
+.portfolio #repos div a {
+  color: #05F4B7;
+}
+
 aside {
   border-bottom: 1px solid #FEFEFA;
 }

@@ -31,6 +31,7 @@ h2 {
 p {
   font-family: $font-paragraphs;
 }
+
 //////////////////////////////////////////////
 //////////////// Nav styling /////////////////
 //////////////////////////////////////////////
@@ -147,7 +148,8 @@ p {
 
 .home {
   background: url("/img/home_horizontal_smaller.jpg") no-repeat;
-  background-attachment: fixed; /* Parallax effect on background image */
+  background-attachment: fixed;
+  /* Parallax effect on background image */
   background-position: center;
   background-size: cover;
   display: flex;
@@ -195,7 +197,8 @@ p {
   min-height: 100vh;
   background: url("/img/about_horizontal_smaller.jpg") no-repeat center;
   background-size: cover;
-  background-attachment: fixed; /* Parallax effect on background image */
+  background-attachment: fixed;
+  /* Parallax effect on background image */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -285,7 +288,8 @@ p {
 .portfolio {
   background: url("/img/portfolio_horizontal_smaller.jpg") no-repeat center;
   background-size: cover;
-  background-attachment: fixed; /* Parallax effect on background image */
+  background-attachment: fixed;
+  /* Parallax effect on background image */
   text-align: center;
   padding-top: 2rem;
 
@@ -408,6 +412,30 @@ p {
       }
     }
   }
+
+  #repos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+    padding: 2rem 0;
+
+    div {
+      // width: 50px;
+      // height: 50px;
+      font-family: $font-paragraphs;
+      background-color: $color-blue;
+      padding: 25px;
+      font-size: 1.5rem;
+      border: 1px solid $color-white;
+      cursor: pointer;
+
+      a {
+        color: $color-green;
+      }
+    }
+  }
 }
 
 //////////////////////////////////////////////
@@ -423,7 +451,8 @@ aside {
     font-size: 1.5rem;
     background: url("/img/quote_horizontal_smaller_still.jpg") no-repeat center;
     background-size: cover;
-    background-attachment: fixed; /* Parallax effect on background image */
+    background-attachment: fixed;
+    /* Parallax effect on background image */
     text-align: center;
     margin: 0;
     color: $color-white;
