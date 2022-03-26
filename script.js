@@ -6,11 +6,11 @@ function myFunction() {
 }
 
 fetch("https://api.github.com/users/ssmeds/repos")
-.then(response => response.json())
-.then(data => {
-    console.log(data);
-    let div = document.getElementById("repos");
-    for (repo in data) {
-        div.insertAdjacentHTML("afterbegin", `<div> <a href='${data[repo].html_url}' target='_blank'>${data[repo].name}</a></div>`);
-    }
-})
+    .then(response => response.json())
+    .then(data => {
+        console.log('data', data);
+        let div = document.getElementById("repos");
+        for (repo in data) {
+            div.insertAdjacentHTML("afterbegin", `<div> <a href='${data[repo].html_url}' target='_blank'>${data[repo].name}</a></div>`);
+        }
+    })
